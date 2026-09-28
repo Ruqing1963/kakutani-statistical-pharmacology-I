@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code, data or paper, please cite it as below."
+title: "Statistical Pharmacology via Kakutani Dichotomy I: The Marginal Drug Kakutani Index and the alpha_c = 1/2 Criticality Theorem in High-Dimensional Conformational Ensembles"
+type: software
+authors:
+  - family-names: Chen
+    given-names: Zhengyi
+    affiliation: "Guangxi Key Laboratory of Drug Discovery and Optimization, School of Pharmacy, Guilin Medical University, Guilin 541199, P. R. China"
+    email: chenzhengyi@glmc.edu.cn
+  - family-names: Chen
+    given-names: Ruqing
+    affiliation: "GUT Geoservice Inc., Montreal, Québec, Canada"
+    email: ruqing@hotmail.com
+doi: 10.5281/zenodo.23005921
+date-released: 2026-09-27
+version: 1.0.0
+repository-code: "https://github.com/<owner>/kakutani-statistical-pharmacology-I"
+license: MIT
+keywords:
+  - Kakutani dichotomy
+  - Hellinger distance
+  - product measures
+  - allostery
+  - conformational ensembles
+  - phase transitions
+  - Euler-Maclaurin summation
+  - finite-size scaling
+  - computational pharmacology
+preferred-citation:
+  type: article
+  title: "Statistical Pharmacology via Kakutani Dichotomy I: The Marginal Drug Kakutani Index and the alpha_c = 1/2 Criticality Theorem in High-Dimensional Conformational Ensembles"
+  authors:
+    - family-names: Chen
+      given-names: Zhengyi
+    - family-names: Chen
+      given-names: Ruqing
+  year: 2026
+  doi: 10.5281/zenodo.23005921
