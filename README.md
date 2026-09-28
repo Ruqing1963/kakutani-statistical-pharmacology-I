@@ -2,7 +2,9 @@
 
 **The Marginal Drug Kakutani Index and the α<sub>c</sub> = 1/2 Criticality Theorem in High-Dimensional Conformational Ensembles**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23005921.svg)](https://doi.org/10.5281/zenodo.23005921)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23018827.svg)](https://doi.org/10.5281/zenodo.23018827)
+
+Version 1.1 DOI: 10.5281/zenodo.23018827 (version 1.0: 10.5281/zenodo.23005921).
 
 Zhengyi Chen<sup>1</sup>, Ruqing Chen<sup>2</sup>
 
@@ -90,8 +92,9 @@ Run on 27 September 2026 with Python 3.12.4, NumPy 1.26.4, Matplotlib 3.8.4, mpm
   title   = {Statistical Pharmacology via Kakutani Dichotomy I: The Marginal Drug Kakutani Index
              and the $\alpha_c=1/2$ Criticality Theorem in High-Dimensional Conformational Ensembles},
   year    = {2026},
-  doi     = {10.5281/zenodo.23005921},
-  url     = {https://doi.org/10.5281/zenodo.23005921}
+  doi     = {10.5281/zenodo.23018827},
+  url     = {https://doi.org/10.5281/zenodo.23018827},
+  note    = {Version 1.1; version 1.0: 10.5281/zenodo.23005921}
 }
 ```
 
