@@ -95,7 +95,7 @@ def H_em(N: int, s: float, order: int = 2) -> mp.mpf:
         return val
     val = N ** (1 - s) / (1 - s) + mp.zeta(s) + N ** (-s) / 2
     if order >= 2:
-        val += s * N ** (-s - 1) / 12
+        val -= s * N ** (-s - 1) / 12
     return val
 
 

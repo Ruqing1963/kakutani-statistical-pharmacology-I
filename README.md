@@ -22,6 +22,8 @@ Two ligands with the same binding free energy and residue-by-residue almost iden
 - **Proposition 3.2.** At criticality `D_tail(N) → A ln 2 = 0.00693147`.
 - **Theorem 4.1 / Corollary 4.2.** The regression exponent in a finite window is `γ_eff = (1−2α) / (1 + (1−2α) ζ(2α) N^{2α−1})`; the upward bias near `α_c` is the pole of `ζ` at `2α = 1`, and the doubling-tail estimator cancels it identically.
 
+Version 1.1 (2026-09-28): the general-`s` Euler–Maclaurin expansion in Lemma 3.2 is `H_N(s) = N^{1-s}/(1-s) + zeta(s) + N^{-s}/2 - s N^{-s-1}/12 + O(N^{-s-3})`; version 1.0 printed the `N^{-s-1}` term with a plus sign, and `paper01_compute_tables.py` evaluated the prediction column of Table 1 with that sign. Only the `N = 10` and `N = 100` rows of that column were affected (deviations of `1e-4` to `1e-6` that are now `1e-7` to `1e-11`); no theorem, constant or exponent uses the term.
+
 Measured values at `N = 10^5` agree with the Euler–Maclaurin predictions to relative accuracy `10^{−10}`:
 
 | α | K_N (measured) | K_N (analytic) |

@@ -92,7 +92,9 @@ The classical thermodynamic description \cite{MWC1965} cannot resolve the parado
 \subsection*{The Kakutani dichotomy}
 For infinite products of probability measures, Kakutani \cite{Kakutani1948} proved that $\bigotimes_i\mu_i$ and $\bigotimes_i\nu_i$ (with $\mu_i\sim\nu_i$ for each $i$) are either mutually absolutely continuous or mutually singular, according as $\sum_i\rho(\mu_i,\nu_i)$ converges or diverges, where $\rho$ is the squared Hellinger distance (equivalently, according as the product of the Hellinger affinities $\prod_i\int\sqrt{\dd\mu_i\,\dd\nu_i}$ is positive or zero). There is no third possibility, and the dichotomy is insensitive to any finite number of factors: the decision is made in the tail. The Gaussian analogue is the Feldman--H\'ajek theorem \cite{Feldman1958,Hajek1958}.
 
+\begin{sloppypar}
 This is precisely the structure that organises \cite{Chen2026}, the localized generalisation of the Bost--Connes system \cite{BostConnes1995}. There the $\mathrm{KMS}_\beta$ simplex of the $S$-local Bost--Connes system is $\Prob(G_S/\Xi_\beta^\perp)$, where the obstruction group
+\end{sloppypar}
 \[
 \Xi_\beta(K,S)=\Bigl\{\chi\in\widehat{G_S}:\ \sum_{\mathfrak p\in S}N\mathfrak p^{-\beta}\,\bigl|1-\chi(\sigma_{\mathfrak p})\bigr|^2<\infty\Bigr\}
 \]
@@ -294,7 +296,7 @@ We first record the Euler--Maclaurin expansion of the generalised harmonic numbe
 \begin{lemma}[Euler--Maclaurin expansion of $H_N(s)$]\label{lem:EM}
 For $s>0$, $s\ne1$, as $N\to\infty$,
 \begin{equation}\label{eq:EMs}
-H_N(s)=\frac{N^{1-s}}{1-s}+\zeta(s)+\frac{N^{-s}}{2}+\frac{s\,N^{-s-1}}{12}+O(N^{-s-3}),
+H_N(s)=\frac{N^{1-s}}{1-s}+\zeta(s)+\frac{N^{-s}}{2}-\frac{s\,N^{-s-1}}{12}+O(N^{-s-3}),
 \end{equation}
 and for $s=1$,
 \begin{equation}\label{eq:EM1}
@@ -311,7 +313,7 @@ R_2(N)=-\int_1^N\frac{\overline B_3(x)}{3!}f'''(x)\,\dd x,
 \end{gather*}
 where $B_2=\frac16$, $\overline B_3$ is the periodic Bernoulli function, and the remainder can be pushed to any order. Since $f'''(x)=-s(s+1)(s+2)x^{-s-3}$ is absolutely integrable at $\infty$ for $s>0$, $R_2(N)=R_2(\infty)+O(N^{-s-2})$, and pushing one more step, $R_2(N)=R_2(\infty)+\frac{B_4}{4!}f'''(N)+O(N^{-s-4})$ with $B_4=-\frac1{30}$, which is $O(N^{-s-3})$. For $s\ne1$, $\int_1^Nx^{-s}\dd x=\frac{N^{1-s}-1}{1-s}$ and $f'(N)=-sN^{-s-1}$, so
 \begin{gather*}
-H_N(s)=\frac{N^{1-s}}{1-s}+C(s)+\frac{N^{-s}}2+\frac{s N^{-s-1}}{12}+O(N^{-s-3}),\\
+H_N(s)=\frac{N^{1-s}}{1-s}+C(s)+\frac{N^{-s}}2-\frac{s N^{-s-1}}{12}+O(N^{-s-3}),\\
 C(s):=-\frac1{1-s}+\frac12+\frac s{12}+R_2(\infty).
 \end{gather*}
 For $s>1$ the term $N^{1-s}/(1-s)\to0$, so $C(s)=\lim_NH_N(s)=\zeta(s)$. The function $C(s)$ defined by the displayed formula is analytic in $\operatorname{Re}s>-2$, $s\ne1$ (the remainder integral converges there), and $C(s)=\zeta(s)$ for $s>1$; by analytic continuation $C(s)=\zeta(s)$ for all $s>0$, $s\ne1$ \cite[\S2.1, eq.~(2.1.4)]{Titchmarsh1986}. This is \eqref{eq:EMs}. For $s=1$ the same computation with $\int_1^Nx^{-1}\dd x=\ln N$ gives $H_N(1)=\ln N+C(1)+\frac1{2N}-\frac1{12N^2}+O(N^{-4})$, and $C(1)=\lim_N(H_N(1)-\ln N)=\gamma_{\mathrm{EM}}$ by definition of the Euler--Mascheroni constant. The tail identity for $s>1$ is the definition of the Hurwitz zeta function, and the bracketing bounds follow from comparing $\sum_{i>N}i^{-s}$ with $\int_N^\infty x^{-s}\dd x$ and $\int_{N+1}^\infty x^{-s}\dd x$, the summand being decreasing.
@@ -345,7 +347,7 @@ By Lemma~\ref{lem:taylor}, $h_i=\sum_ka_k\delta_i^{2k}=\sum_ka_kc^{2k}i^{-2k\alp
 \begin{proof}[Proof of Theorem~\ref{thm:trichotomy}]
 \emph{Qualitative part.} By \eqref{eq:sandwich}, $A\,H_N(2\alpha)\le K_N(\alpha)\le(1+\varepsilon_c)A\,H_N(2\alpha)$, and $H_N(2\alpha)$ converges iff $2\alpha>1$. Hence $\sum_ih_i<\infty$ iff $\alpha>\frac12$, and Theorem~\ref{thm:kakutani} gives $\PA\sim\PB$ for $\alpha>\frac12$ and $\PA\perp\PB$ for $\alpha\le\frac12$, together with $\Pi_\infty>0$ resp.\ $\Pi_\infty=0$.
 
-\emph{(1).} Insert \eqref{eq:EMs} with $s=2\alpha\in(0,1)$ into $K_N=AH_N(2\alpha)+R_N$ (Lemma~\ref{lem:series}); the term $\frac{A s}{12}N^{-s-1}$ is absorbed into $O(N^{-2\alpha-1})$. The description of $R_N$ is \eqref{eq:Rbound}--\eqref{eq:Cinf}. For $\Pi_N$ use \eqref{eq:logPi}: $Q_N\le\frac14\sum_ih_i^2\le\frac14(1+\varepsilon_c)^2c^4H_N(4\alpha)$, which is bounded for $\alpha>\frac14$ and $O(N^{1-4\alpha})=o(N^{1-2\alpha})$ otherwise.
+\emph{(1).} Insert \eqref{eq:EMs} with $s=2\alpha\in(0,1)$ into $K_N=AH_N(2\alpha)+R_N$ (Lemma~\ref{lem:series}); the term $-\frac{A s}{12}N^{-s-1}$ is absorbed into $O(N^{-2\alpha-1})$. The description of $R_N$ is \eqref{eq:Rbound}--\eqref{eq:Cinf}. For $\Pi_N$ use \eqref{eq:logPi}: $Q_N\le\frac14\sum_ih_i^2\le\frac14(1+\varepsilon_c)^2c^4H_N(4\alpha)$, which is bounded for $\alpha>\frac14$ and $O(N^{1-4\alpha})=o(N^{1-2\alpha})$ otherwise.
 
 \emph{(2).} At $\alpha=\frac12$ the $k$-th term of \eqref{eq:Kseries} is $a_kc^{2k}H_N(k)$. For $k=1$ use \eqref{eq:EM1}: $AH_N(1)=A(\ln N+\gamma_{\mathrm{EM}}+\frac1{2N})+O(N^{-2})$. For $k\ge2$, $H_N(k)=\zeta(k)-\zeta(k,N+1)$ with $0<\zeta(k,N+1)\le N^{1-k}/(k-1)\le N^{-1}$, so $\sum_{k\ge2}a_kc^{2k}H_N(k)=C_\infty(\frac12)-\theta_N$, $0<\theta_N\le N^{-1}\sum_{k\ge2}a_kc^{2k}=\varepsilon_cAN^{-1}$; this is the $O(c^4N^{-1})$ term. The numerical value of $C_\infty(\frac12)$ is computed from $a_2c^4\zeta(2)=1.25\times10^{-4}\times1.6449341=2.05617\times10^{-4}$, $a_3c^6\zeta(3)=2.625\times10^{-6}\times1.2020569=3.1554\times10^{-6}$, $a_4c^8\zeta(4)=6.7031\times10^{-8}\times1.0823232=7.255\times10^{-8}$, and $a_5c^{10}\zeta(5)=1.97\times10^{-9}$, the remaining terms being below $10^{-10}$: $C_\infty(\frac12)=2.08847\times10^{-4}$. For \eqref{eq:critPi}, by \eqref{eq:logPi}, $\ln\Pi_N=-\frac12K_N-Q_N$ with $Q_N$ increasing to $Q_\infty\le\frac14(1+\varepsilon_c)^2c^4\zeta(2)=4.22\times10^{-5}$ and $Q_\infty-Q_N\le\frac14(1+\varepsilon_c)^2c^4\zeta(2,N+1)=O(N^{-1})$; inserting \eqref{eq:crit} gives $\ln\Pi_N=-\frac A2\ln N-\frac12(A\gamma_{\mathrm{EM}}+C_\infty(\frac12))-Q_\infty+O(N^{-1})$.
 
@@ -468,33 +470,33 @@ The four target values fixed in advance for $N=10^5$ were $K_{10^5}\approx6.31$,
 
 \begin{table}[p]
 \centering\small
-\caption{Multi-scale benchmark data. The marginal drug Kakutani index $K_N$, the Kakutani affinity $\Pi_N$ and the doubling tail increment $\Dtail(N)=K_{2N}-K_N$ for $p=\tfrac12$, $c=\tfrac1{10}$, together with the Euler--Maclaurin prediction $K_N^{\mathrm{EM}}$ of Lemma~\ref{lem:series} (four-term expansions, $k\le6$) and the relative deviation $(K_N-K_N^{\mathrm{EM}})/K_N$. The deviation at $N=10$ is the truncation error of the asymptotic expansion, not of the data.}
+\caption{Multi-scale benchmark data. The marginal drug Kakutani index $K_N$, the Kakutani affinity $\Pi_N$ and the doubling tail increment $\Dtail(N)=K_{2N}-K_N$ for $p=\tfrac12$, $c=\tfrac1{10}$, together with the Euler--Maclaurin prediction $K_N^{\mathrm{EM}}$ of Lemma~\ref{lem:series} (four-term expansions, $k\le6$) and the relative deviation $(K_N-K_N^{\mathrm{EM}})/K_N$. The deviation at $N=10$ is the truncation error of the asymptotic expansion, not of the data. (Version 1.1: the $N^{-s-1}$ term of \eqref{eq:EMs} now carries its correct negative sign; the prediction column has been recomputed accordingly.)}
 \label{tab:bench}
 \begin{tabular}{@{}ccllllr@{}}
 \toprule
 $\alpha$ & $N$ & $K_N$ & $\Pi_N$ & $\Dtail(N)$ & $K_N^{\mathrm{EM}}$ & rel.\ dev. \\
 \midrule
-0.25 & $10^{1}$ & 0.05058144 & 0.974990 & 0.0258266 & 0.05060779 & $-5.2\times10^{-4}$ \\
-0.25 & $10^{2}$ & 0.1865509 & 0.910883 & 0.082783 & 0.1865517 & $-4.5\times10^{-6}$ \\
-0.25 & $10^{3}$ & 0.6189526 & 0.733762 & 0.262012 & 0.6189526 & $-4.3\times10^{-8}$ \\
-0.25 & $10^{4}$ & 1.986677 & 0.370293 & 0.828499 & 1.986677 & $-4.2\times10^{-10}$ \\
-0.25 & $10^{5}$ & 6.311486 & 0.042600 & 2.619799 & 6.311486 & $-3.8\times10^{-12}$ \\
+0.25 & $10^{1}$ & 0.05058144 & 0.974990 & 0.0258266 & 0.05058144 & $1.6\times10^{-7}$ \\
+0.25 & $10^{2}$ & 0.1865509 & 0.910883 & 0.082783 & 0.1865509 & $2.5\times10^{-11}$ \\
+0.25 & $10^{3}$ & 0.6189526 & 0.733762 & 0.262012 & 0.6189526 & $3.4\times10^{-12}$ \\
+0.25 & $10^{4}$ & 1.986677 & 0.370293 & 0.828499 & 1.986677 & $1.1\times10^{-12}$ \\
+0.25 & $10^{5}$ & 6.311486 & 0.042600 & 2.619799 & 6.311486 & $3.3\times10^{-13}$ \\
 \addlinespace
-0.50 & $10^{1}$ & 0.02948662 & 0.985345 & 0.00669352 & 0.02948666 & $-1.1\times10^{-6}$ \\
-0.50 & $10^{2}$ & 0.05208138 & 0.974275 & 0.00690715 & 0.05208138 & $-7.5\times10^{-10}$ \\
+0.50 & $10^{1}$ & 0.02948662 & 0.985345 & 0.00669352 & 0.02948661 & $2.8\times10^{-7}$ \\
+0.50 & $10^{2}$ & 0.05208138 & 0.974275 & 0.00690715 & 0.05208138 & $5.2\times10^{-11}$ \\
 0.50 & $10^{3}$ & 0.07506343 & 0.963144 & 0.00692903 & 0.07506343 & $2.5\times10^{-11}$ \\
 0.50 & $10^{4}$ & 0.09808489 & 0.952121 & 0.00693123 & 0.09808489 & $1.9\times10^{-11}$ \\
 0.50 & $10^{5}$ & 0.1211103 & 0.941222 & 0.00693145 & 0.1211103 & $1.6\times10^{-11}$ \\
 \addlinespace
-0.75 & $10^{1}$ & 0.0201059 & 0.989982 & 0.00175387 & 0.0201138 & $-3.9\times10^{-4}$ \\
-0.75 & $10^{2}$ & 0.02428183 & 0.987917 & 0.000582569 & 0.02428186 & $-1.0\times10^{-6}$ \\
-0.75 & $10^{3}$ & 0.02564455 & 0.987244 & 0.00018514 & 0.02564455 & $-3.0\times10^{-9}$ \\
-0.75 & $10^{4}$ & 0.02607685 & 0.987031 & $5.85754\times10^{-5}$ & 0.02607685 & $6.2\times10^{-11}$ \\
+0.75 & $10^{1}$ & 0.0201059 & 0.989982 & 0.00175387 & 0.02010589 & $2.9\times10^{-7}$ \\
+0.75 & $10^{2}$ & 0.02428183 & 0.987917 & 0.000582569 & 0.02428183 & $8.5\times10^{-11}$ \\
+0.75 & $10^{3}$ & 0.02564455 & 0.987244 & 0.00018514 & 0.02564455 & $7.3\times10^{-11}$ \\
+0.75 & $10^{4}$ & 0.02607685 & 0.987031 & $5.85754\times10^{-5}$ & 0.02607685 & $7.2\times10^{-11}$ \\
 0.75 & $10^{5}$ & 0.0262136 & 0.986964 & $1.85241\times10^{-5}$ & 0.0262136 & $7.2\times10^{-11}$ \\
 \addlinespace
-1.00 & $10^{1}$ & 0.01563567 & 0.992199 & 0.000463986 & 0.015639 & $-2.1\times10^{-4}$ \\
-1.00 & $10^{2}$ & 0.01648787 & 0.991776 & $4.96265\times10^{-5}$ & 0.01648787 & $-2.0\times10^{-7}$ \\
-1.00 & $10^{3}$ & 0.01657738 & 0.991732 & $4.99625\times10^{-6}$ & 0.01657738 & $-8.8\times10^{-11}$ \\
+1.00 & $10^{1}$ & 0.01563567 & 0.992199 & 0.000463986 & 0.01563567 & $2.1\times10^{-7}$ \\
+1.00 & $10^{2}$ & 0.01648787 & 0.991776 & $4.96265\times10^{-5}$ & 0.01648787 & $1.2\times10^{-10}$ \\
+1.00 & $10^{3}$ & 0.01657738 & 0.991732 & $4.99625\times10^{-6}$ & 0.01657738 & $1.1\times10^{-10}$ \\
 1.00 & $10^{4}$ & 0.01658637 & 0.991727 & $4.99963\times10^{-7}$ & 0.01658637 & $1.1\times10^{-10}$ \\
 1.00 & $10^{5}$ & 0.01658727 & 0.991727 & $4.99996\times10^{-8}$ & 0.01658727 & $1.1\times10^{-10}$ \\
 \midrule
@@ -538,7 +540,7 @@ $\alpha$ & $\gth=1-2\alpha$ & $\zeta(2\alpha)$ & $\gnum$ & $\gEM(10^4)$ & $\gEM^
 \end{figure}
 
 \subsection*{Reading the tables}
-Three features of Table~\ref{tab:bench} deserve comment. First, the agreement between $K_N$ and $K_N^{\mathrm{EM}}$ improves with $N$ as a power, from $10^{-4}$ at $N=10$ to $10^{-10}$--$10^{-12}$ at $N=10^5$, in accordance with the asymptotic character of the Euler--Maclaurin expansion; the data are exact to double precision, and the residual at large $N$ is rounding. Second, the column $\Dtail(N)$ separates the three phases without any fit: it grows as $N^{1/2}$ at $\alpha=0.25$ (ratio $\approx3.16$ per decade), converges to $0.00693$ at $\alpha_c$, and decays as $N^{-1/2}$ resp.\ $N^{-1}$ at $\alpha=0.75$ resp.\ $1$ (ratios $\approx0.316$ and $0.1$ per decade). Third, $\Pi_N$ at $N=10^5$ equals $0.9412$ at the critical point and $0.9870$ in the nearest subcritical case: no finite-$N$ observable distinguishes ``will collapse to zero'' from ``has converged to $0.987$'' by its value alone---only the scaling with $N$ does, which is why $\Dtail$ and not $\Pi_N$ is the diagnostic proposed here. Table~\ref{tab:scaling} shows that the pole-corrected exponent $\gEM^{\mathrm{fit}}$ predicts $\gnum$ to within $3\times10^{-4}$ over the whole range, and that $\gtail$ is unbiased to within $5\times10^{-4}$.
+Three features of Table~\ref{tab:bench} deserve comment. First, the agreement between $K_N$ and $K_N^{\mathrm{EM}}$ improves with $N$ as a power, from $10^{-7}$ at $N=10$ (the neglected $O(N^{-s-3})$ term of \eqref{eq:EMs}) to $10^{-10}$--$10^{-13}$ at $N=10^5$, in accordance with the asymptotic character of the Euler--Maclaurin expansion; the data are exact to double precision, and the residual at large $N$ is rounding. Second, the column $\Dtail(N)$ separates the three phases without any fit: it grows as $N^{1/2}$ at $\alpha=0.25$ (ratio $\approx3.16$ per decade), converges to $0.00693$ at $\alpha_c$, and decays as $N^{-1/2}$ resp.\ $N^{-1}$ at $\alpha=0.75$ resp.\ $1$ (ratios $\approx0.316$ and $0.1$ per decade). Third, $\Pi_N$ at $N=10^5$ equals $0.9412$ at the critical point and $0.9870$ in the nearest subcritical case: no finite-$N$ observable distinguishes ``will collapse to zero'' from ``has converged to $0.987$'' by its value alone---only the scaling with $N$ does, which is why $\Dtail$ and not $\Pi_N$ is the diagnostic proposed here. Table~\ref{tab:scaling} shows that the pole-corrected exponent $\gEM^{\mathrm{fit}}$ predicts $\gnum$ to within $3\times10^{-4}$ over the whole range, and that $\gtail$ is unbiased to within $5\times10^{-4}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
